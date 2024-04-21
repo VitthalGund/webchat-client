@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Message } from "../types/typeContext";
+import avtar from "../assets/avatar.svg"
 
 const MessageComponent = ({ user, id, body, created, room, updated, deletMsg }: Message) => {
 
@@ -10,7 +11,7 @@ const MessageComponent = ({ user, id, body, created, room, updated, deletMsg }: 
                     <div className="thread__author">
                         <Link to={`/profile/${id}/`} className="thread__authorInfo">
                             <div className="avatar avatar--small">
-                                <img src={`https://api.multiavatar.com/${user.email}`} />
+                                <img src={avtar} />
                             </div>
                             <span>@{user.username}</span>
                         </Link>
