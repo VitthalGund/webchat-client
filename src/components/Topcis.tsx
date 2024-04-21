@@ -1,11 +1,17 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import InfoContext from "../context/Data/InfoContext";
 import { InfoContextType } from "../types/typeContext";
 import { Link } from "react-router-dom";
+import { getTopics } from "../api/axios";
 
 const Topcis = () => {
-    const { topics } = useContext(InfoContext) as InfoContextType;
+    const { topics, updateTopics } = useContext(InfoContext) as InfoContextType;
     const [search, setSearch] = useState<string>("")
+    useEffect(() => {
+        getTopics().then(data => {
+            updateTopics(data?.data?.topics);
+        });
+    }, [])
     return (
         <>
             <main className="create-room layout">

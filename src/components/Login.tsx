@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { ChangeEvent, useState, useEffect, useContext } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import { login } from "../api/axios";
 import { AuthContext } from "../types/authContext";
 import AuthenticationContext from "../context/Auth/userContext";
@@ -60,7 +60,7 @@ export default function LogIn() {
                 updateUserData({ email: resp?.data?.user?.email, name: resp?.data?.user?.name, username: resp?.data?.user?.username })
                 router("/");
             } else {
-                toast.error("Invalid credentials");
+                toast.error(resp.response.data.error);
             }
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {

@@ -110,6 +110,7 @@ const Home = () => {
 
                         </div>
                     </div>
+                    <div style={{ visibility: "hidden" }}></div>
 
                 </div>
             </main>

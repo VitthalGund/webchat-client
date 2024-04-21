@@ -16,7 +16,7 @@ export const login = async (data: { email: string; password: string }) => {
         // withCredentials: true,
       }
     );
-    console.log(resp);
+    // console.log(resp);
     return resp;
   } catch (error: any) {
     return error;
@@ -31,7 +31,7 @@ export const register = async (data: {
   AdminAccount: string;
 }) => {
   try {
-    console.log("data");
+    // console.log("data");
     const resp = await api.post(
       "/register/",
       {
@@ -42,7 +42,7 @@ export const register = async (data: {
         withCredentials: true,
       }
     );
-    console.log(resp);
+    // console.log(resp);
     return resp;
   } catch (error: any) {
     return error;
@@ -68,7 +68,7 @@ export const createRoom = async (
         headers: { Authorization: `Bearer ${token}` },
       }
     );
-    console.log(resp);
+    // console.log(resp);
     return resp;
   } catch (error: any) {
     return error;
@@ -84,7 +84,7 @@ export const updateRoomAPI = async (
     description: string;
   }
 ) => {
-  console.log("updated data: ", data);
+  // console.log("updated data: ", data);
   try {
     const resp = await api.put(
       `/update-room/${id}/`,
@@ -95,7 +95,7 @@ export const updateRoomAPI = async (
         headers: { Authorization: `Bearer ${token}` },
       }
     );
-    console.log(resp);
+    // console.log(resp);
     return resp;
   } catch (error: any) {
     return error;
@@ -125,7 +125,7 @@ export const getRoom = async (id: number, token: string) => {
       // withCredentials: true,
       headers: { Authorization: `Bearer ${token}` },
     });
-    console.log(resp.data);
+    // console.log(resp.data);
     return resp;
   } catch (error: any) {
     return error;
@@ -153,7 +153,7 @@ export const deleteMessage = async (id: number, token: string) => {
 
 export const deleteRoom = async (id: number, token: string) => {
   try {
-    console.log({ token, id });
+    // console.log({ token, id });
     const resp = await api.delete(`/delete-room/${id}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -169,7 +169,7 @@ export const craeteMessage = async (
   data: { user_id: number; body: string }
 ) => {
   try {
-    console.log({ id, token, data });
+    // console.log({ id, token, data });
     const resp = await api.post(
       `/send/${id}/ `,
       {

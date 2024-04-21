@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import logo from "../assets/logo.svg"
 import { useContext, useState } from "react"
 import { AuthContext } from "../types/authContext";
 import AuthenticationContext from "../context/Auth/userContext";
@@ -15,7 +14,6 @@ const Navbar = () => {
             <header className="header header--loggedIn">
                 <div className="container">
                     <Link to="/" className="header__logo">
-                        <img src={logo} />
                         <h1>Web Chat</h1>
                     </Link>
                     <form className="header__search" method="GET" action="{% url 'home' %}">

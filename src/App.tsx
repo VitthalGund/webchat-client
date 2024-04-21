@@ -6,7 +6,7 @@ import { Suspense } from "react";
 import SignIn from "./components/Signup.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Home from "./components/Home.tsx";
-import Topcis from "./components/Topcis..tsx";
+import Topcis from "./components/Topcis.tsx";
 import 'react-toastify/dist/ReactToastify.css';
 import CreateRoom from "./components/CreateRoom.tsx";
 import { ToastContainer } from "react-toastify";

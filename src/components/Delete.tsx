@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { deleteRoom } from "../api/axios"
 import { AuthContext } from "../types/authContext";
 import AuthenticationContext from "../context/Auth/userContext";
-import { Link, unstable_HistoryRouter, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 // { name, id }: { name: string, id: string }
 const Delete = () => {
