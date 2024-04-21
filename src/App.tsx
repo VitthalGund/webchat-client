@@ -10,7 +10,7 @@ import Topcis from "./components/Topcis..tsx";
 import 'react-toastify/dist/ReactToastify.css';
 import CreateRoom from "./components/CreateRoom.tsx";
 import { ToastContainer } from "react-toastify";
-import Group from "./components/Group.tsx";
+import Room from "./components/Room.tsx";
 import Delete from "./components/Delete.tsx";
 const ROLES = {
   'User': 2001,
@@ -99,7 +99,7 @@ export default function App() {
                   // <ReactLoading type="bars" color="#4338ca" className="flex justify-center items-center align-middle m-auto" />
                   <h1>Loading</h1>
                 }>
-                  <Group />
+                  <Room />
                 </Suspense>
               } />
               <Route caseSensitive={true} path="/update-room/:id" element={

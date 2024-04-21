@@ -12,7 +12,6 @@ const Navbar = () => {
 
     return (
         <div>
-            {/* {% load static %} */}
             <header className="header header--loggedIn">
                 <div className="container">
                     <Link to="/" className="header__logo">
@@ -39,15 +38,13 @@ const Navbar = () => {
                         </label>
                     </form>
                     <nav className="header__menu">
-                        {/* <!-- Logged In --> */}
-                        {/* {% if request.user.is_authenticated %} */}
                         {isLogin && <div className="header__user">
                             <Link to="update-user">
                                 <div className="avatar avatar--medium active">
                                     <img src={`https://api.multiavatar.com/${userData.username}`} />
                                 </div>
                                 <p>
-                                    {/* {{ request.user.username }} <span>@{{ request.user.username }}</span> */}
+                                    {userData.name} <span>@{userData.username}</span>
                                 </p>
                             </Link>
                             <button className="dropdown-button">
@@ -63,14 +60,11 @@ const Navbar = () => {
                                 </svg>
                             </button>
                         </div>}
-                        {/* {% else %} */}
 
-                        {/* <!-- Not Logged In --> */}
                         {!isLogin && <Link to="/login">
                             <img src={avater} />
                             <p>Login</p>
                         </Link>}
-                        {/* {% endif %} */}
 
                         <div className="dropdown-menu">
                             <Link to="/update-user" className="dropdown-link">
