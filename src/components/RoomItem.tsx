@@ -6,7 +6,7 @@ const RoomItem = ({ id, created, description, host, name, participants, topic, u
         <>
             <div className="roomListRoom">
                 <div className="roomListRoom__header">
-                    <Link to={{ pathname: "/profile", search: "/id=" + host.id }} className="roomListRoom__author">
+                    <Link to={"#"} className="roomListRoom__author">
                         <div className="avatar avatar--small">
                             <img src={host.avatar} />
                         </div>

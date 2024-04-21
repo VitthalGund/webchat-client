@@ -10,7 +10,7 @@ const MessageComponent = ({ user, id, body, created, room, updated, deletMsg }: 
                     <div className="thread__author">
                         <Link to={`/profile/${id}/`} className="thread__authorInfo">
                             <div className="avatar avatar--small">
-                                <img src={`https://api.multiavatar.com/${user.name.replace(" ", "%")}`} />
+                                <img src={`https://api.multiavatar.com/${user.email}`} />
                             </div>
                             <span>@{user.username}</span>
                         </Link>
