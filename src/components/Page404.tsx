@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-
+import avtar from "../assets/avatar.svg"
 
 const Page404 = () => {
     const naviagte = useNavigate();
@@ -21,12 +21,12 @@ const Page404 = () => {
                             </div>
                         </div>
                         <div>
-                            <img src="https://i.ibb.co/G9DC8S0/404-2.png" />
+                            <img src={avtar} />
                         </div>
                     </div>
                 </div>
                 <div>
-                    <img src="https://i.ibb.co/ck1SGFJ/Group.png" />
+                    <img src={avtar} />
                 </div>
             </div>
         </>

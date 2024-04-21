@@ -7,6 +7,7 @@ import AuthenticationContext from "../context/Auth/userContext";
 import { AuthContext } from "../types/authContext";
 import MessageComponent from "./Message";
 import { toast } from "react-toastify";
+import avtar from "../assets/avatar.svg"
 
 const Room = () => {
     const { id } = useParams();
@@ -121,7 +122,7 @@ const Room = () => {
                                     <p>Hosted By</p>
                                     <a href="/profile/1/" className="room__author">
                                         <div className="avatar avatar--small">
-                                            <img src={`https://api.multiavatar.com/${user.name.replace(" ", "%")}`} />
+                                            <img src={avtar} />
                                         </div>
                                         <span>@{room.host.name}</span>
                                     </a>
@@ -180,7 +181,7 @@ const Room = () => {
                             <h1>Admin</h1>
                             <Link to="/profile/1/" className="participant">
                                 <div className="avatar avatar--medium">
-                                    <img src="/images/Profile_picture_QKqsL3j.png" />
+                                    <img src={avtar} />
                                 </div>
                                 <p>
                                     {room.host.name}
@@ -192,7 +193,7 @@ const Room = () => {
                                 room.participants && room.participants.map((item, idx) => {
                                     return <Link key={idx} to="/profile/1/" className="participant">
                                         <div className="avatar avatar--medium">
-                                            <img src="/images/Profile_picture_QKqsL3j.png" />
+                                            <img src={avtar} />
                                         </div>
                                         <p>
                                             {item.name}

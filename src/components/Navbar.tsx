@@ -39,7 +39,7 @@ const Navbar = () => {
                         {isLogin && <div className="header__user">
                             <Link to="update-user">
                                 <div className="avatar avatar--medium active">
-                                    <img src={`https://api.multiavatar.com/${userData.email}`} />
+                                    <img src={avater} />
                                 </div>
                                 <p>
                                     {userData.name} <span>@{userData.username}</span>

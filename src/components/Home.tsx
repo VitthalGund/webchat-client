@@ -57,9 +57,6 @@ const Home = () => {
                             </svg>
                         </Link>
                     </div>
-                    {/* <!-- Topics End --> */}
-
-                    {/* <!-- Room List Start --> */}
                     <div className="roomList">
                         <div className="mobile-menu">
                             <form className="header__search">

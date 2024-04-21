@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { Room } from "../types/typeContext"
+import avtar from "../assets/avatar.svg"
 
 const RoomItem = ({ id, created, description, host, name, participants, topic, updated }: Room) => {
     return (
@@ -8,7 +9,7 @@ const RoomItem = ({ id, created, description, host, name, participants, topic, u
                 <div className="roomListRoom__header">
                     <Link to={"#"} className="roomListRoom__author">
                         <div className="avatar avatar--small">
-                            <img src={host.avatar} />
+                            <img src={avtar} />
                         </div>
                         <span>@{host.name}</span>
                     </Link>
