@@ -57,7 +57,7 @@ The WebChat Client is the frontend application for the WebChat real-time chat pl
    npm start
    ```
 
-5. Open your browser and visit `http://localhost:3000` to view the application.
+5. Open your browser and visit `http://localhost:5173` to view the application.
 
 ## 📧 Contact:
 
