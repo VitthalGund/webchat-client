@@ -1,32 +1,68 @@
-# React + TypeScript + Vite
+# 🌐 WebChat Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The WebChat Client is the frontend application for the WebChat real-time chat platform. It is built using React with TypeScript to provide a modern and interactive user interface for the chat application. This client allows users to join chat rooms, send messages, view room topics, and interact with other users in real-time.
 
-Currently, two official plugins are available:
+## 🚀 Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Real-time Messaging:** Engage in real-time conversations with other users in chat rooms.
+- **User Authentication:** Secure user authentication and authorization for accessing chat rooms.
+- **Custom UI Components:** Customized UI components for an enhanced user experience.
+- **Room Management:** Join existing chat rooms and create new ones.
+- **Responsive Design:** Responsive layout to ensure compatibility across various devices.
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React:** JavaScript library for building user interfaces.
+- **TypeScript:** Typed superset of JavaScript for improved code quality and maintainability.
+- **React Router:** Declarative routing for React applications.
+- **Axios:** Promise-based HTTP client for making AJAX requests.
+- **Vite:** Build tool that provides instant server start and fast builds.
 
-- Configure the top-level `parserOptions` property like this:
+## 📁 Repository Structure:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
+- `src/`: Main source code directory.
+  - `components/`: Contains reusable React components.
+  - `api/`: Contains modules for handling API requests using Axios.
+  - `context/`: Context providers for managing global application state.
+    - `auth/`: Authentication context and related functionality.
+    - `data/`: Data context and related functionality.
+  - `App.tsx`: Main application component.
+  - `index.tsx`: Entry point for the application.
+- `public/`: Public assets and HTML template files.
+- `README.md`: Project documentation and usage instructions.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 📝 Usage:
 
-# webchat-client
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/VitthalGund/webchat-client.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd webchat-client
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+5. Open your browser and visit `http://localhost:3000` to view the application.
+
+## 📧 Contact:
+
+For any inquiries or feedback, feel free to contact me.
+
+## 🖼️ UI Reference:
+
+The UI design for this project has been inspired by the [LearnSync](https://github.com/VitthalGund/LearnSync) repository. Check it out for more design inspiration!
