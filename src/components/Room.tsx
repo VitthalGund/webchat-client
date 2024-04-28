@@ -36,14 +36,14 @@ const Room = () => {
             // console.log(err);
         })
 
-         // Polling to fetch new messages every 5 seconds
-         const intervalId = setInterval(() => {
+        // Polling to fetch new messages every 5 seconds
+        const intervalId = setInterval(() => {
             getRoom(Number(id), auth.accessToken).then(data => {
                 updateMessage(data.data.messages);
             }).catch(err => {
                 toast.error("Something went wrong while fetching new messages!");
             });
-        }, 1000);
+        }, 50);
 
         // Cleanup interval on component unmount
         return () => clearInterval(intervalId);

@@ -31,7 +31,8 @@ export type Message = {
   body: string;
   updated: string;
   created: string;
-  deletMsg: (e, id: number) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  deletMsg: (e: any, id: number) => void;
 };
 
 export type InfoContextType = {

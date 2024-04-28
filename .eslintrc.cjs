@@ -3,6 +3,7 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
+    "eslint:@typescript-eslint/no-explicit-any",
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
   ],
